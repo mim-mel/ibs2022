@@ -1,9 +1,9 @@
 const Cunference = () => {
-    return(
-        <div>
-            <div>Cunference</div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <div>Cunference</div>
+    </div>
+  );
+};
 
 export default Cunference;
