@@ -17,6 +17,16 @@ const Banner = () => {
 
   return (
     <BannerWrap>
+      <SliderWrap>
+        <SliderBlock count={count}>
+          <img src='/image/main2.jpg' alt='main-img2' />
+          <img src='/image/main1.jpg' alt='main-img1' />
+          <img src='/image/main2.jpg' alt='main-img2' />
+          <img src='/image/main1.jpg' alt='main-img1' />
+          <img src='/image/main2.jpg' alt='main-img2' />
+          <img src='/image/main1.jpg' alt='main-img1' />
+        </SliderBlock>
+      </SliderWrap>
       <BannerContentsWrap>
         <BannerContentsBlock>
           <BannerTitie>IBS PARTNERS</BannerTitie>
@@ -31,16 +41,6 @@ const Banner = () => {
           <Button>MORE INFO</Button>
         </BannerContentsBlock>
       </BannerContentsWrap>
-      <SliderWrap>
-        <SliderBlock count={count}>
-          <img src='/image/main2.jpg' alt='main-img2' />
-          <img src='/image/main1.jpg' alt='main-img1' />
-          <img src='/image/main2.jpg' alt='main-img2' />
-          <img src='/image/main1.jpg' alt='main-img1' />
-          <img src='/image/main2.jpg' alt='main-img2' />
-          <img src='/image/main1.jpg' alt='main-img1' />
-        </SliderBlock>
-      </SliderWrap>
     </BannerWrap>
   );
 };
@@ -50,6 +50,61 @@ const BannerWrap = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
+
+  @media screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+`;
+
+const SliderWrap = styled.div`
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  font-size: 100px;
+  top: 0;
+  left: 57%;
+  border-end-start-radius: 200px;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 55%;
+  }
+
+  @media screen and (max-width: 768px) {
+    border-end-start-radius: 100px;
+  }
+`;
+
+const SliderBlock = styled.div`
+  display: flex;
+  position: relative;
+  top: 0;
+  left: ${props => '-' + props.count * 834 + 'px'};
+  transition: 0.5s;
+
+  img {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    img {
+      position: relative;
+      top: -200px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    left: ${props => '-' + props.count * 480 + 'px'};
+    img {
+      width: 480px;
+      top: -110px;
+    }
+  }
 `;
 
 const BannerContentsWrap = styled.div`
@@ -57,6 +112,16 @@ const BannerContentsWrap = styled.div`
   height: 100%;
   margin: 0 auto;
   position: relative;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    position: relative;
+    top: -250px;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: -170px;
+  }
 `;
 
 const BannerContentsBlock = styled.div`
@@ -69,6 +134,12 @@ const BannerContentsBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    top: 0;
+    transform: translate(0, 0);
+    width: 100%;
+  }
 `;
 
 const BannerTitie = styled.h1`
@@ -78,19 +149,39 @@ const BannerTitie = styled.h1`
   color: #053dc0;
   margin: 0;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 0;
+    line-height: 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 52px;
+    line-height: 62px;
+  }
 `;
 
 const SubTitle = styled.h2`
-  font-size: 20px;
+  font-size: 21px;
   color: #053dc0;
   font-weight: 600;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
 `;
 
 const Text = styled.div`
   font-size: 17px;
   color: #787878;
-  line-height: 33px;
+  line-height: 30px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+    line-height: 23px;
+  }
 `;
 
 const Button = styled.button`
@@ -106,34 +197,23 @@ const Button = styled.button`
   border-radius: 10px;
   transition: 0.2s;
 
-  &:hover {
-    background-color: #053dc0;
-    border: 2px solid #053dc0;
-    color: white;
-    font-weight: 500;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #053dc0;
+      border: 2px solid #053dc0;
+      color: white;
+      font-weight: 500;
+    }
   }
-`;
 
-const SliderWrap = styled.div`
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  font-size: 100px;
-  top: 0;
-  left: 57%;
-  border-end-start-radius: 200px;
-`;
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+  }
 
-const SliderBlock = styled.div`
-  display: flex;
-  position: relative;
-  top: 0;
-  left: ${props => '-' + props.count * 834 + 'px'};
-  transition: 0.5s;
-
-  img {
-    height: 100%;
+  @media screen and (max-width: 768px) {
+    width: 130px;
+    padding: 11px;
+    font-size: 13px;
   }
 `;
 
