@@ -105,13 +105,13 @@ const ConsultingSection = () => {
 
 const Wrap = styled.div`
   width: 1100px;
-  height: 800px;
+  height: auto;
   margin: 150px auto;
   display: flex;
   flex-direction: column;
 
   @media screen and (max-width: 1400px) {
-    width: 950px;
+    width: 1000px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -119,7 +119,7 @@ const Wrap = styled.div`
     margin: 80px auto;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     margin: 40px auto;
   }
 `;
@@ -149,7 +149,7 @@ const Arrow1 = styled.img`
   position: absolute;
   left: -10%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     width: 10px;
     height: 10px;
     left: -6%;
@@ -164,7 +164,7 @@ const Arrow2 = styled.img`
   position: absolute;
   left: -10%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     width: 10px;
     height: 10px;
     left: -6%;
@@ -177,7 +177,7 @@ const Consulting = styled.div`
   font-weight: ${props => (props.toggle ? '500' : '600')};
   color: ${props => (props.toggle ? '#646464' : '#0559ce')};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     font-size: 20px;
   }
 `;
@@ -188,7 +188,7 @@ const Service = styled.div`
   font-weight: ${props => (props.toggle ? '600' : '500')};
   color: ${props => (props.toggle ? '#0559ce' : '#646464')};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     font-size: 20px;
   }
 `;
@@ -207,7 +207,7 @@ const ImgIconWrap = styled.div`
     grid-template-columns: 60% 38%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     grid-template-columns: 100%;
     justify-content: center;
   }
@@ -235,7 +235,7 @@ const Img = styled.div`
     background-size: 330px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     width: 300px;
     height: 300px;
     background-size: 300px;
@@ -281,7 +281,7 @@ const IconBlock = styled.div`
     padding: 15px 15px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     padding: 20px 30px;
   }
 `;
@@ -379,7 +379,7 @@ const Icon5 = styled.div`
 const IconTextTitle = styled.div`
   font-size: 20px;
   color: #0559ce;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 10px;
 
   @media screen and (max-width: 1024px) {

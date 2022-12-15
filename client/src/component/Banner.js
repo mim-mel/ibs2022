@@ -75,7 +75,7 @@ const SliderWrap = styled.div`
     height: 55%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     border-end-start-radius: 100px;
   }
 `;
@@ -98,7 +98,7 @@ const SliderBlock = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     left: ${props => '-' + props.count * 480 + 'px'};
     img {
       width: 480px;
@@ -113,13 +113,17 @@ const BannerContentsWrap = styled.div`
   margin: 0 auto;
   position: relative;
 
+  @media screen and (max-width: 1400px) {
+    width: 1000px;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 80%;
     position: relative;
     top: -250px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     top: -170px;
   }
 `;
@@ -155,7 +159,7 @@ const BannerTitie = styled.h1`
     line-height: 100px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     font-size: 52px;
     line-height: 62px;
   }
@@ -167,7 +171,7 @@ const SubTitle = styled.h2`
   font-weight: 600;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     font-size: 17px;
     margin-bottom: 15px;
   }
@@ -178,7 +182,7 @@ const Text = styled.div`
   color: #787878;
   line-height: 30px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     font-size: 13px;
     line-height: 23px;
   }
@@ -210,7 +214,7 @@ const Button = styled.button`
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 760px) {
     width: 130px;
     padding: 11px;
     font-size: 13px;

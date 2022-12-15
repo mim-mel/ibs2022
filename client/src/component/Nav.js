@@ -213,6 +213,7 @@ const Bubble = styled.div`
   border-radius: 12px;
   display: none;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
 
   :after {
     content: '';
@@ -240,6 +241,7 @@ const Bubble = styled.div`
     height: ${props => (props.isDropdownClicked ? 'auto' : '0')};
     overflow: hidden;
     transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0) 0px 4px 12px;
 
     :after {
       display: none;
