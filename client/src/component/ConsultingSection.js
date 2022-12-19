@@ -106,7 +106,7 @@ const ConsultingSection = () => {
 const Wrap = styled.div`
   width: 1100px;
   height: auto;
-  margin: 150px auto;
+  margin: 150px auto 100px auto;
   display: flex;
   flex-direction: column;
 

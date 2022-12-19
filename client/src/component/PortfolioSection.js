@@ -81,7 +81,6 @@ const PortfolioSection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCount(prev => (prev > elementLength - 1 ? 0 : prev + 1));
-      console.log(count);
     }, 2800);
 
     return () => {
