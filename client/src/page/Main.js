@@ -1,3 +1,4 @@
+import AdviserSection from '../component/AdviserSection';
 import Banner from '../component/Banner';
 import ConsultingSection from '../component/ConsultingSection';
 import MapSection from '../component/MapSection';
@@ -10,6 +11,7 @@ const Main = () => {
       <ConsultingSection />
       <PortfolioSection />
       <MapSection />
+      <AdviserSection />
     </div>
   );
 };

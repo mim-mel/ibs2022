@@ -86,11 +86,12 @@ const MapWrap = styled.div`
 
     @media screen and (max-width: 1024px) {
         width: 80%;    
-        margin: 150px auto;
+        margin: 150px auto 100px auto;
     }
 
     @media screen and (max-width: 760px) {
-        height: 300px;
+        height: auto;
+        margin: 130px auto 60px auto;
     }
 `
 

@@ -120,7 +120,7 @@ const Wrap = styled.div`
   }
 
   @media screen and (max-width: 760px) {
-    margin: 40px auto;
+    margin: 50px auto 20px auto;
   }
 `;
 

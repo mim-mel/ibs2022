@@ -130,7 +130,7 @@ const PortfolioWrap = styled.div`
   }
 
   @media screen and (max-width: 760px) {
-    margin: 50px 0;
+    margin: 0;
   }
 `;
 
@@ -248,6 +248,10 @@ const PortfolioImgWrap1 = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 80vw;
+  }
+
+  @media screen and (max-width: 760px) {
+    height: 340px;
   }
 `;
 
