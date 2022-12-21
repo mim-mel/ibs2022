@@ -2,7 +2,8 @@ import styled from '@emotion/styled/macro';
 
 const AdviserSection = () => {
     return(
-        <AdiviserWrap>
+        <AdiviserWrapMain>
+<AdiviserWrap>
             <HorizonLine/>
             <VerticalLine left='33.33%'/>
             <VerticalLine left='66.66%'/>
@@ -29,8 +30,16 @@ const AdviserSection = () => {
                 </LogoBlock>
             </LogoWrap>
         </AdiviserWrap>
+        </AdiviserWrapMain>
     )
 }
+
+const AdiviserWrapMain = styled.div`
+
+    @media screen and (max-width: 760px) {
+        margin-bottom: 400px;
+    }
+`
 
 const AdiviserWrap = styled.div`
     width: 1100px;
@@ -41,12 +50,7 @@ const AdiviserWrap = styled.div`
 
     @media screen and (max-width: 1024px) {
         width: 80%;
-        margin-bottom: 200px;
-    }
-
-    @media screen and (max-width: 760px) {
-        width: 80%;
-        height: 200px;
+        margin-bottom: 150px;
     }
 `
 
@@ -58,7 +62,7 @@ const HorizonLine = styled.div`
     top: 50%;
 
     @media screen and (max-width: 1024px) {
-        width: 80%;
+        width: 100%;
         margin-bottom: 200px;
     }
 

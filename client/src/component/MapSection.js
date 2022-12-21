@@ -164,7 +164,7 @@ const MapTextBlock = styled.div`
     box-sizing: border-box;
 
     @media screen and (max-width: 760px) {
-        padding: 40px 0;
+        padding: 30px 15px;
     }
 `
 
@@ -200,7 +200,7 @@ const RoundText = styled.div`
     }
 
     @media screen and (max-width: 760px) {
-        margin-bottom: ${props=> props.margin ? '20px' : '0'};
+        margin-bottom: ${props=> props.margin ? '10px' : '0'};
         font-size: 13px;
         padding: 4px 10px;
     }
@@ -220,6 +220,7 @@ const MapText = styled.div`
     @media screen and (max-width: 760px) {
         font-size: 12px;
         margin-left: ${(props)=>props.leftmore ? '86px' : '13px'};
+        width: 70%;
     }
 `
 

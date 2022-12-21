@@ -200,6 +200,7 @@ const Button = styled.button`
   background-color: white;
   border-radius: 10px;
   transition: 0.2s;
+  cursor: pointer;
 
   @media (hover: hover) {
     &:hover {
