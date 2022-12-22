@@ -134,7 +134,7 @@ const MapImgBlock = styled.div`
 const MapImgShadow = styled.div`
     width: 100%;
     height: 100%;
-    background-color: #0559ce;
+    background-color: #053dc0;
     position: absolute;
     top: 15px;
     left: 15px;
@@ -171,7 +171,7 @@ const MapTextBlock = styled.div`
 const MapTitle = styled.div`
     font-size: 25px;
     font-weight: 600;
-    color: #0559ce;
+    color: #053dc0;
     margin-bottom: 45px;
 
     @media screen and (max-width: 1024px) {
@@ -189,8 +189,8 @@ const RoundText = styled.div`
     font-size: 15px;
     padding: 5px 15px;
     border-radius: 30px;
-    border: 2px solid #0559ce;
-    color: #0559ce;
+    border: 2px solid #053dc0;
+    color: #053dc0;
     font-weight: 600;
     display: inline-flex;
     margin-bottom: ${props=> props.margin ? '30px' : '0'};

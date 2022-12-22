@@ -156,7 +156,7 @@ const ArrowLeft = styled.div`
   position: absolute;
   width: 35px;
   height: 35px;
-  background-color: #0559ce;
+  background-color: #053dc0;
   border-radius: 50%;
   left: 87%;
   background-image: url(/image/arrow-side.png);
@@ -185,7 +185,7 @@ const ArrowRight = styled.div`
   position: absolute;
   width: 35px;
   height: 35px;
-  background-color: #0559ce;
+  background-color: #053dc0;
   border-radius: 50%;
   left: 93%;
   transform: rotate(180deg);
@@ -215,7 +215,7 @@ const TextTitle = styled.div`
   font-size: 32px;
   font-weight: 600;
   font-family: 'Lexend Deca', sans-serif;
-  color: #0559ce;
+  color: #053dc0;
   margin-bottom: 30px;
 
   @media screen and (max-width: 760px) {
@@ -270,7 +270,7 @@ const PortfolioImgBack = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #0559ce;
+  background-color: #053dc0;
   transition: 0.3s;
   opacity: 0;
 `;

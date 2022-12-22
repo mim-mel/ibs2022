@@ -175,7 +175,7 @@ const Consulting = styled.div`
   font-family: 'Lexend Deca', sans-serif;
   font-size: 23px;
   font-weight: ${props => (props.toggle ? '500' : '600')};
-  color: ${props => (props.toggle ? '#646464' : '#0559ce')};
+  color: ${props => (props.toggle ? '#646464' : '#053dc0')};
 
   @media screen and (max-width: 760px) {
     font-size: 20px;
@@ -186,7 +186,7 @@ const Service = styled.div`
   font-family: 'Lexend Deca', sans-serif;
   font-size: 23px;
   font-weight: ${props => (props.toggle ? '600' : '500')};
-  color: ${props => (props.toggle ? '#0559ce' : '#646464')};
+  color: ${props => (props.toggle ? '#053dc0' : '#646464')};
 
   @media screen and (max-width: 760px) {
     font-size: 20px;
@@ -378,7 +378,7 @@ const Icon5 = styled.div`
 
 const IconTextTitle = styled.div`
   font-size: 20px;
-  color: #0559ce;
+  color: #053dc0;
   font-weight: 600;
   margin-bottom: 10px;
 
