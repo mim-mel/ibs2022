@@ -1,30 +1,44 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import styled from '@emotion/styled/macro';
 
 const MailFormSection = () => {
+  const [IsChecked, setIsChecked] = useState(false);
   const form = useRef();
+
+  const CheckHandler = checked => {
+    if (checked === true) {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+  };
 
   const onSubmit = e => {
     e.preventDefault();
+    console.log(IsChecked);
 
-    emailjs
-      .sendForm(
-        'service_nm9pvgo',
-        'template_i53nvnq',
-        form.current,
-        'AXn8zy4BgPAGy--1w'
-      )
-      .then(
-        res => {
-          alert('메일이 전송되었습니다.');
-          console.log(res);
-        },
-        err => {
-          alert('메일 전송에 실패하였습니다. 다시 시도해주세요.');
-          console.log(err);
-        }
-      );
+    if (IsChecked === true) {
+      emailjs
+        .sendForm(
+          'service_nm9pvgo',
+          'template_i53nvnq',
+          form.current,
+          'AXn8zy4BgPAGy--1w'
+        )
+        .then(
+          res => {
+            alert('메일이 전송되었습니다.');
+            console.log(res);
+          },
+          err => {
+            alert('메일 전송에 실패하였습니다. 다시 시도해주세요.');
+            console.log(err);
+          }
+        );
+    } else {
+      alert('개인정보 제공에 동의해주세요.');
+    }
   };
 
   return (
@@ -48,7 +62,7 @@ const MailFormSection = () => {
 
         <NameInputWrap>
           <NameInputBlock>
-            <Name>전화번호</Name>
+            <Name>연락처</Name>
             <Input type='tel' name='phone' />
           </NameInputBlock>
 
@@ -63,6 +77,29 @@ const MailFormSection = () => {
           <TextArea type='text' name='text' />
         </TextAreaBlock>
 
+        <CheckBoxBlock>
+          <CheckBox
+            type='checkbox'
+            value={IsChecked}
+            onChange={e => CheckHandler(e.target.checked)}
+          />
+          <CheckBoxText>개인정보 제공동의</CheckBoxText>
+          <BubbleBlock>
+            <BubbleText>
+              IBS 파트너스는 고객 문의사항 접수 및 답변을 위해 아래와 같이
+              개인정보를 수집,이용합니다.
+            </BubbleText>
+            <BubbleTextSmall>목적: 고객 문의사항 접수 및 답변</BubbleTextSmall>
+            <BubbleTextSmall>
+              항목: 병원명, 성함, 연락처, 이메일
+            </BubbleTextSmall>
+            <BubbleTextSmall>보유 기간: 수집일로부터 1년</BubbleTextSmall>
+            <BubbleTextSmall margin>
+              서비스 이용에 필요한 최소한의 수집 및 이용에 동의하지 않을 수
+              있으나, 동의를 거부할 경우 서비스 이용에 제한이 있을 수 있습니다.
+            </BubbleTextSmall>
+          </BubbleBlock>
+        </CheckBoxBlock>
         <Button type='submit'>제출하기</Button>
       </Form>
     </MailWrap>
@@ -73,7 +110,7 @@ const MailWrap = styled.div`
   width: 850px;
   height: 520px;
   border-radius: 40px;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 150px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -235,6 +272,71 @@ const Button = styled.button`
     height: 35px;
     left: 56%;
   }
+`;
+
+const BubbleBlock = styled.div`
+  position: absolute;
+  width: 290px;
+  height: 120px;
+  padding: 15px;
+  background: #f7f7f7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  left: 140px;
+  top: -20px;
+  opacity: 0;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  :after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 11px 15px 11px 0;
+    border-color: transparent #f7f7f7;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -15px;
+    top: 20px;
+  }
+`;
+
+const BubbleText = styled.div`
+  font-size: 12.5px;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 10px;
+`;
+
+const BubbleTextSmall = styled.div`
+  font-size: 10px;
+  color: #636363;
+  margin-top: ${props => (props.margin ? '10px' : '0')};
+`;
+
+const CheckBoxBlock = styled.div`
+  position: absolute;
+  margin: 20px 17px;
+  display: flex;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    :hover ${BubbleBlock} {
+      opacity: 1;
+    }
+  }
+`;
+
+const CheckBox = styled.input`
+  width: 23px;
+  color: #a5a5a5;
+`;
+
+const CheckBoxText = styled.div`
+  font-size: 15px;
+  color: #969696;
 `;
 
 export default MailFormSection;

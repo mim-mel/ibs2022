@@ -81,7 +81,7 @@ const MapSection = () => {
 const MapWrap = styled.div`
     width: 1000px;
     height: 700px;
-    margin: 200px auto;
+    margin: 200px auto 150px auto;
     box-sizing: border-box;
 
     @media screen and (max-width: 1024px) {

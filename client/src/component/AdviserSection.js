@@ -46,7 +46,7 @@ const AdiviserWrap = styled.div`
     height: 300px;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 
     @media screen and (max-width: 1024px) {
         width: 80%;
