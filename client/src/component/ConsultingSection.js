@@ -1,4 +1,5 @@
 import styled from '@emotion/styled/macro';
+import Fade from 'react-reveal/Fade';
 import { useState } from 'react';
 
 const ConsultingSection = () => {
@@ -14,91 +15,95 @@ const ConsultingSection = () => {
 
   return (
     <Wrap>
-      <TitleBlock>
-        <ArrowBlock onClick={onConsulting}>
-          <Arrow1 src='/image/arrow-fill.png' toggle={toggle} />
-          <Consulting toggle={toggle}>Our Consulting</Consulting>
-        </ArrowBlock>
-        <ArrowBlock onClick={onService}>
-          <Arrow2 src='/image/arrow-fill.png' toggle={toggle} />
-          <Service toggle={toggle}>Our Service</Service>
-        </ArrowBlock>
-      </TitleBlock>
-      <ImgIconWrap>
-        <Img toggle={toggle} />
-        <IconWrap>
-          {/* icon1 */}
-          <IconBlock>
-            <Icon1 toggle={toggle} />
-            <IconTextBlock>
-              <IconTextTitle>
-                {toggle ? '정부지원금' : '노무컨설팅'}
-              </IconTextTitle>
-              <IconTextInfo>
-                {toggle
-                  ? '내일채움공제, 고용안정 장려금 등'
-                  : '근로계약서, 임금대장, 퇴직금 산정 등'}
-              </IconTextInfo>
-            </IconTextBlock>
-          </IconBlock>
-          {/* icon2 */}
-          <IconBlock>
-            <Icon2 toggle={toggle} />
-            <IconTextBlock>
-              <IconTextTitle>
-                {toggle ? '리스크관리' : '세무컨설팅'}
-              </IconTextTitle>
-              <IconTextInfo>
-                {toggle
-                  ? '직원혹은 고객과의 분쟁 해결'
-                  : '소득세 관리, 맞춤형 절세 방안 제시 등'}
-              </IconTextInfo>
-            </IconTextBlock>
-          </IconBlock>
-          {/* icon3 */}
-          <IconBlock>
-            <Icon3 toggle={toggle} />
-            <IconTextBlock>
-              <IconTextTitle>
-                {toggle ? '법인설립' : '개원컨설팅'}
-              </IconTextTitle>
-              <IconTextInfo>
-                {toggle
-                  ? '법인설립 절차 대리진행'
-                  : '동업계약서 작성, 인테리어 등'}
-              </IconTextInfo>
-            </IconTextBlock>
-          </IconBlock>
-          {/* icon4 */}
-          <IconBlock>
-            <Icon4 toggle={toggle} />
-            <IconTextBlock>
-              <IconTextTitle>
-                {toggle ? '법인청산' : '교육컨설팅'}
-              </IconTextTitle>
-              <IconTextInfo>
-                {toggle
-                  ? '법인청산 절차 대리진행'
-                  : 'C.S 교육, 법정 의무 교육 등'}
-              </IconTextInfo>
-            </IconTextBlock>
-          </IconBlock>
-          {/* icon5 */}
-          <IconBlock>
-            <Icon5 toggle={toggle} />
-            <IconTextBlock>
-              <IconTextTitle>
-                {toggle ? '감정평가' : '홍보컨설팅'}
-              </IconTextTitle>
-              <IconTextInfo>
-                {toggle
-                  ? '감정평가 신속 상담 지원 및 진행'
-                  : '홈페이지형 블로그, 웹사이트 제작'}
-              </IconTextInfo>
-            </IconTextBlock>
-          </IconBlock>
-        </IconWrap>
-      </ImgIconWrap>
+      <Fade bottom>
+        <TitleBlock>
+          <ArrowBlock onClick={onConsulting}>
+            <Arrow1 src='/image/arrow-fill.png' toggle={toggle} />
+            <Consulting toggle={toggle}>Our Consulting</Consulting>
+          </ArrowBlock>
+          <ArrowBlock onClick={onService}>
+            <Arrow2 src='/image/arrow-fill.png' toggle={toggle} />
+            <Service toggle={toggle}>Our Service</Service>
+          </ArrowBlock>
+        </TitleBlock>
+      </Fade>
+      <Fade bottom>
+        <ImgIconWrap>
+          <Img toggle={toggle} />
+          <IconWrap>
+            {/* icon1 */}
+            <IconBlock>
+              <Icon1 toggle={toggle} />
+              <IconTextBlock>
+                <IconTextTitle>
+                  {toggle ? '정부지원금' : '노무컨설팅'}
+                </IconTextTitle>
+                <IconTextInfo>
+                  {toggle
+                    ? '내일채움공제, 고용안정 장려금 등'
+                    : '근로계약서, 임금대장, 퇴직금 산정 등'}
+                </IconTextInfo>
+              </IconTextBlock>
+            </IconBlock>
+            {/* icon2 */}
+            <IconBlock>
+              <Icon2 toggle={toggle} />
+              <IconTextBlock>
+                <IconTextTitle>
+                  {toggle ? '리스크관리' : '세무컨설팅'}
+                </IconTextTitle>
+                <IconTextInfo>
+                  {toggle
+                    ? '직원혹은 고객과의 분쟁 해결'
+                    : '소득세 관리, 맞춤형 절세 방안 제시 등'}
+                </IconTextInfo>
+              </IconTextBlock>
+            </IconBlock>
+            {/* icon3 */}
+            <IconBlock>
+              <Icon3 toggle={toggle} />
+              <IconTextBlock>
+                <IconTextTitle>
+                  {toggle ? '법인설립' : '개원컨설팅'}
+                </IconTextTitle>
+                <IconTextInfo>
+                  {toggle
+                    ? '법인설립 절차 대리진행'
+                    : '동업계약서 작성, 인테리어 등'}
+                </IconTextInfo>
+              </IconTextBlock>
+            </IconBlock>
+            {/* icon4 */}
+            <IconBlock>
+              <Icon4 toggle={toggle} />
+              <IconTextBlock>
+                <IconTextTitle>
+                  {toggle ? '법인청산' : '교육컨설팅'}
+                </IconTextTitle>
+                <IconTextInfo>
+                  {toggle
+                    ? '법인청산 절차 대리진행'
+                    : 'C.S 교육, 법정 의무 교육 등'}
+                </IconTextInfo>
+              </IconTextBlock>
+            </IconBlock>
+            {/* icon5 */}
+            <IconBlock>
+              <Icon5 toggle={toggle} />
+              <IconTextBlock>
+                <IconTextTitle>
+                  {toggle ? '감정평가' : '홍보컨설팅'}
+                </IconTextTitle>
+                <IconTextInfo>
+                  {toggle
+                    ? '감정평가 신속 상담 지원 및 진행'
+                    : '홈페이지형 블로그, 웹사이트 제작'}
+                </IconTextInfo>
+              </IconTextBlock>
+            </IconBlock>
+          </IconWrap>
+        </ImgIconWrap>
+      </Fade>
     </Wrap>
   );
 };
@@ -259,7 +264,7 @@ const IconBlock = styled.div`
   transition: 0.3s;
   position: relative;
   top: 0;
-  left: 0;
+  left: -30px;
   cursor: pointer;
   align-items: center;
 

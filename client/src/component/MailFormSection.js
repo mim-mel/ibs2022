@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import styled from '@emotion/styled/macro';
+import Fade from 'react-reveal/Fade';
 
 const MailFormSection = () => {
   const [IsChecked, setIsChecked] = useState(false);
@@ -42,67 +43,72 @@ const MailFormSection = () => {
   };
 
   return (
-    <MailWrap>
-      <MailTitle>상담 문의하기</MailTitle>
-      <MailText>
-        동물병원 운영에 대해 궁금하신 사항이 있다면 언제든지 문의해주세요.
-      </MailText>
-      <Form ref={form} onSubmit={onSubmit}>
-        <NameInputWrap>
-          <NameInputBlock>
-            <Name>병원명</Name>
-            <Input type='text' name='hospital' />
-          </NameInputBlock>
+    <Fade bottom>
+      <MailWrap>
+        <MailTitle>상담 문의하기</MailTitle>
+        <MailText>
+          동물병원 운영에 대해 궁금하신 사항이 있다면 언제든지 문의해주세요.
+        </MailText>
+        <Form ref={form} onSubmit={onSubmit}>
+          <NameInputWrap>
+            <NameInputBlock>
+              <Name>병원명</Name>
+              <Input type='text' name='hospital' />
+            </NameInputBlock>
 
-          <NameInputBlock>
-            <Name>성 함</Name>
-            <Input type='name' name='name' />
-          </NameInputBlock>
-        </NameInputWrap>
+            <NameInputBlock>
+              <Name>성 함</Name>
+              <Input type='name' name='name' />
+            </NameInputBlock>
+          </NameInputWrap>
 
-        <NameInputWrap>
-          <NameInputBlock>
-            <Name>연락처</Name>
-            <Input type='tel' name='phone' />
-          </NameInputBlock>
+          <NameInputWrap>
+            <NameInputBlock>
+              <Name>연락처</Name>
+              <Input type='tel' name='phone' />
+            </NameInputBlock>
 
-          <NameInputBlock>
-            <Name>이메일</Name>
-            <Input type='email' name='email' />
-          </NameInputBlock>
-        </NameInputWrap>
+            <NameInputBlock>
+              <Name>이메일</Name>
+              <Input type='email' name='email' />
+            </NameInputBlock>
+          </NameInputWrap>
 
-        <TextAreaBlock>
-          <Name>문의 내용</Name>
-          <TextArea type='text' name='text' />
-        </TextAreaBlock>
+          <TextAreaBlock>
+            <Name>문의 내용</Name>
+            <TextArea type='text' name='text' />
+          </TextAreaBlock>
 
-        <CheckBoxBlock>
-          <CheckBox
-            type='checkbox'
-            value={IsChecked}
-            onChange={e => CheckHandler(e.target.checked)}
-          />
-          <CheckBoxText>개인정보 제공동의</CheckBoxText>
-          <BubbleBlock>
-            <BubbleText>
-              IBS 파트너스는 고객 문의사항 접수 및 답변을 위해 아래와 같이
-              개인정보를 수집,이용합니다.
-            </BubbleText>
-            <BubbleTextSmall>목적: 고객 문의사항 접수 및 답변</BubbleTextSmall>
-            <BubbleTextSmall>
-              항목: 병원명, 성함, 연락처, 이메일
-            </BubbleTextSmall>
-            <BubbleTextSmall>보유 기간: 수집일로부터 1년</BubbleTextSmall>
-            <BubbleTextSmall margin>
-              서비스 이용에 필요한 최소한의 수집 및 이용에 동의하지 않을 수
-              있으나, 동의를 거부할 경우 서비스 이용에 제한이 있을 수 있습니다.
-            </BubbleTextSmall>
-          </BubbleBlock>
-        </CheckBoxBlock>
-        <Button type='submit'>제출하기</Button>
-      </Form>
-    </MailWrap>
+          <CheckBoxBlock>
+            <CheckBox
+              type='checkbox'
+              value={IsChecked}
+              onChange={e => CheckHandler(e.target.checked)}
+            />
+            <CheckBoxText>개인정보 제공동의</CheckBoxText>
+            <BubbleBlock>
+              <BubbleText>
+                IBS 파트너스는 고객 문의사항 접수 및 답변을 위해 아래와 같이
+                개인정보를 수집,이용합니다.
+              </BubbleText>
+              <BubbleTextSmall>
+                목적: 고객 문의사항 접수 및 답변
+              </BubbleTextSmall>
+              <BubbleTextSmall>
+                항목: 병원명, 성함, 연락처, 이메일
+              </BubbleTextSmall>
+              <BubbleTextSmall>보유 기간: 수집일로부터 1년</BubbleTextSmall>
+              <BubbleTextSmall margin>
+                서비스 이용에 필요한 최소한의 수집 및 이용에 동의하지 않을 수
+                있으나, 동의를 거부할 경우 서비스 이용에 제한이 있을 수
+                있습니다.
+              </BubbleTextSmall>
+            </BubbleBlock>
+          </CheckBoxBlock>
+          <Button type='submit'>제출하기</Button>
+        </Form>
+      </MailWrap>
+    </Fade>
   );
 };
 
@@ -279,27 +285,26 @@ const BubbleBlock = styled.div`
   width: 290px;
   height: 120px;
   padding: 15px;
-  background: #f7f7f7;
+  background: #f4f4f4;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  left: 140px;
-  top: -20px;
+  left: 0px;
+  top: 40px;
   opacity: 0;
   transition: 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   :after {
     content: '';
     position: absolute;
     border-style: solid;
-    border-width: 11px 15px 11px 0;
-    border-color: transparent #f7f7f7;
+    border-width: 0 15px 15px;
+    border-color: #f4f4f4 transparent;
     display: block;
     width: 0;
     z-index: 1;
-    left: -15px;
-    top: 20px;
+    top: -15px;
+    left: 50px;
   }
 `;
 
@@ -320,7 +325,6 @@ const CheckBoxBlock = styled.div`
   position: absolute;
   margin: 20px 17px;
   display: flex;
-  cursor: pointer;
 
   @media (hover: hover) {
     :hover ${BubbleBlock} {
@@ -332,11 +336,12 @@ const CheckBoxBlock = styled.div`
 const CheckBox = styled.input`
   width: 23px;
   color: #a5a5a5;
+  cursor: pointer;
 `;
 
 const CheckBoxText = styled.div`
   font-size: 15px;
-  color: #969696;
+  color: #8c8c8c;
 `;
 
 export default MailFormSection;

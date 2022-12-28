@@ -1,4 +1,5 @@
 import styled from '@emotion/styled/macro';
+import Fade from 'react-reveal/Fade';
 import { useEffect, useState } from 'react';
 
 const portfolioArray = [
@@ -91,31 +92,40 @@ const PortfolioSection = () => {
   return (
     <PortfolioWrap>
       <TextWrap>
-        <TextTitle>Portfolio</TextTitle>
-        <TextDesc>
-          IBS 파트너스는 지금까지 전국 500여곳의 동물병원 원장님과 함께했습니다.
-          <br />
-          축적된 데이터와 경험을 바탕으로 동물병원에 가장 효과적인 컨설팅을
-          제공해드립니다.
-        </TextDesc>
-        <ArrowLeft src='/image/arrow-side.png' onClick={onLeft} />
-        <ArrowRight src='/image/arrow-side.png' onClick={onRight} />
+        <Fade bottom>
+          <TextTitle>Portfolio</TextTitle>
+        </Fade>
+        <Fade bottom>
+          <TextDesc>
+            IBS 파트너스는 지금까지 전국 500여곳의 동물병원 원장님과
+            함께했습니다.
+            <br />
+            축적된 데이터와 경험을 바탕으로 동물병원에 가장 효과적인 컨설팅을
+            제공해드립니다.
+          </TextDesc>
+        </Fade>
+        <Fade bottom>
+          <ArrowLeft src='/image/arrow-side.png' onClick={onLeft} />
+          <ArrowRight src='/image/arrow-side.png' onClick={onRight} />
+        </Fade>
       </TextWrap>
-      <PortfolioImgWrap1>
-        <PortfolioImgWrap2>
-          {portfolioArray.map((item, i) => (
-            <PortfolioImgBlock key={i} count={count}>
-              <PortfolioImg src={item.src} />
-              <PortfolioImgBack />
-              <PortfolioArrow />
-              <PortfolioTextBlcok>
-                <PortfolioText>PORTFOLIO</PortfolioText>
-                <PortfolioTextName>{item.name}</PortfolioTextName>
-              </PortfolioTextBlcok>
-            </PortfolioImgBlock>
-          ))}
-        </PortfolioImgWrap2>
-      </PortfolioImgWrap1>
+      <Fade right duration={2000}>
+        <PortfolioImgWrap1>
+          <PortfolioImgWrap2>
+            {portfolioArray.map((item, i) => (
+              <PortfolioImgBlock key={i} count={count}>
+                <PortfolioImg src={item.src} />
+                <PortfolioImgBack />
+                <PortfolioArrow />
+                <PortfolioTextBlcok>
+                  <PortfolioText>PORTFOLIO</PortfolioText>
+                  <PortfolioTextName>{item.name}</PortfolioTextName>
+                </PortfolioTextBlcok>
+              </PortfolioImgBlock>
+            ))}
+          </PortfolioImgWrap2>
+        </PortfolioImgWrap1>
+      </Fade>
     </PortfolioWrap>
   );
 };

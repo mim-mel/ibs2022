@@ -1,4 +1,5 @@
 import styled from '@emotion/styled/macro';
+import Fade from 'react-reveal/Fade';
 import { useEffect, useState } from 'react';
 
 const Banner = () => {
@@ -29,16 +30,24 @@ const Banner = () => {
       </SliderWrap>
       <BannerContentsWrap>
         <BannerContentsBlock>
-          <BannerTitie>IBS PARTNERS</BannerTitie>
-          <SubTitle>동물병원 컨설팅 전문회사</SubTitle>
-          <Text>
-            IBS 파트너스는 동물병원 전담팀을 구성하고 있습니다.
-            <br />
-            다년간의 경험을 통해 동물병원 원장님들에게 합리적이고
-            <br />
-            현실적인 관리 솔루션을 제공해 드리겠습니다.
-          </Text>
-          <Button>MORE INFO</Button>
+          <Fade bottom delay={0}>
+            <BannerTitie>IBS PARTNERS</BannerTitie>
+          </Fade>
+          <Fade bottom delay={500}>
+            <SubTitle>동물병원 컨설팅 전문회사</SubTitle>
+          </Fade>
+          <Fade bottom delay={1000}>
+            <Text>
+              IBS 파트너스는 동물병원 전담팀을 구성하고 있습니다.
+              <br />
+              다년간의 경험을 통해 동물병원 원장님들에게 합리적이고
+              <br />
+              현실적인 관리 솔루션을 제공해 드리겠습니다.
+            </Text>
+          </Fade>
+          <Fade bottom delay={1500}>
+            <Button>MORE INFO</Button>
+          </Fade>
         </BannerContentsBlock>
       </BannerContentsWrap>
     </BannerWrap>
