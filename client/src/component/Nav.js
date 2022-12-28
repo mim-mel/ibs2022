@@ -1,4 +1,5 @@
 import styled from '@emotion/styled/macro';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Nav = () => {
@@ -63,10 +64,14 @@ const Nav = () => {
   return (
     <NavWrap>
       <NavBox>
-        <NavLogo src='/image/ibs-logo.png' alt='logo' />
+        <LinkStyled to='/'>
+          <NavLogo src='/image/ibs-logo.png' alt='logo' />
+        </LinkStyled>
         <TitleWrap isMenu={isMenu}>
           <NavTitle>
-            <NavTitleText>COMPANY</NavTitleText>
+            <LinkStyled to='/company'>
+              <NavTitleText>COMPANY</NavTitleText>
+            </LinkStyled>
           </NavTitle>
           <NavTitle>
             <NavTitleText>
@@ -312,6 +317,10 @@ const NavTitle = styled.div`
     color: white;
     margin-top: 0;
   }
+`;
+
+const LinkStyled = styled(Link)`
+  text-decoration: none;
 `;
 
 const NavTitleText = styled.div`
