@@ -3,8 +3,8 @@ import Fade from 'react-reveal/Fade';
 
 const Company = () => {
   return (
-    <CompanyWrap>
-      <SubBanner>
+    <Wrap>
+      <SubBanner url='url(/image/submain1.jpg)'>
         <SubBannerTitle>COMPANY</SubBannerTitle>
       </SubBanner>
       <Fade bottom>
@@ -46,17 +46,17 @@ const Company = () => {
       <Fade bottom>
         <IbsMapImg src='/image/organization.jpg' />
       </Fade>
-    </CompanyWrap>
+    </Wrap>
   );
 };
 
-const Line = styled.div`
+export const Line = styled.div`
   width: 100%;
   height: 0.1px;
   background-color: rgba(0, 0, 0, 0.1);
 `;
 
-const CompanyWrap = styled.div`
+export const Wrap = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -65,10 +65,10 @@ const CompanyWrap = styled.div`
   align-items: center;
 `;
 
-const SubBanner = styled.div`
+export const SubBanner = styled.div`
   width: 100%;
   height: 630px;
-  background-image: url(/image/submain1.jpg);
+  background-image: ${props => props.url};
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -84,8 +84,8 @@ const SubBanner = styled.div`
   }
 `;
 
-const SubBannerTitle = styled.div`
-  font-size: 62px;
+export const SubBannerTitle = styled.div`
+  font-size: 60px;
   letter-spacing: 5px;
   color: white;
   font-family: 'Lexend Deca', sans-serif;

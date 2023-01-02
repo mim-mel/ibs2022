@@ -83,7 +83,9 @@ const Nav = () => {
               />
             </NavTitleText>
             <Bubble isDropdownClicked={isConsulting}>
-              <SubTitle bottom>컨설팅</SubTitle>
+              <LinkStyled to='/labor'>
+                <SubTitle bottom>컨설팅</SubTitle>
+              </LinkStyled>
               <SubTitle>서비스</SubTitle>
             </Bubble>
           </NavTitle>
@@ -319,7 +321,7 @@ const NavTitle = styled.div`
   }
 `;
 
-const LinkStyled = styled(Link)`
+export const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
 

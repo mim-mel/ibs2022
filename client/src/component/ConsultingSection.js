@@ -323,12 +323,12 @@ const Icon2 = styled.div`
       ? 'url(/image/risk-service.png)'
       : 'url(/image/tax-consulting.png)'};
   width: 50px;
-  height: 50px;
+  height: 52px;
   background-repeat: no-repeat;
 
   @media screen and (max-width: 1024px) {
     width: 40px;
-    height: 40px;
+    height: 42px;
     background-size: 38px;
   }
 `;
