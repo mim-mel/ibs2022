@@ -7,12 +7,17 @@ const Labor = () => {
   return (
     <div>
       <Wrap>
-        <SubBanner url='url(image/submain2.jpg)'>
+        <SubBanner
+          url='url(image/submain2.jpg)'
+          positionIpad='-700px -90px'
+          positionPhone='-450px -0px'
+        >
           <SubBannerTitle>CONSULTING</SubBannerTitle>
         </SubBanner>
+
         <ButtonsWrap>
           <LinkStyled to='/labor'>
-            <Button color='#053dc0'>
+            <Button color='#053dc0' marginBottomPhone>
               <ButtonImg src='image/labor-consulting-w.png' />
               <ButtonText color='white' weight='600'>
                 노무컨설팅
@@ -39,7 +44,7 @@ const Labor = () => {
           </LinkStyled>
 
           <LinkStyled to='/edu'>
-            <Button color='white'>
+            <Button color='white' positionPhone>
               <ButtonImg src='image/edu-consulting.png' />
               <ButtonText color='#053dc0' weight='900'>
                 교육컨설팅
@@ -48,7 +53,7 @@ const Labor = () => {
           </LinkStyled>
 
           <LinkStyled to='/ad'>
-            <Button color='white'>
+            <Button color='white' positionPhone>
               <ButtonImg src='image/ad-consulting.png' />
               <ButtonText color='#053dc0' weight='900'>
                 홍보컨설팅
@@ -78,6 +83,7 @@ const Labor = () => {
             </MainTextBlock>
           </Fade>
         </MainImgTextWrap>
+
         <LaborContentsWrap>
           <Fade bottom delay={0}>
             <LaborContentsBox>
@@ -108,7 +114,7 @@ const Labor = () => {
           </Fade>
 
           <Fade bottom delay={1000}>
-            <LaborContentsBox>
+            <LaborContentsBox middle>
               <BoxImage url='image/labor4.jpg' />
               <BoxTitle>근로자의 사직, 퇴직금 산정</BoxTitle>
               <BoxText>
@@ -126,15 +132,26 @@ const Labor = () => {
   );
 };
 
-const ButtonsWrap = styled.div`
+export const ButtonsWrap = styled.div`
   width: 860px;
   height: 123px;
   margin: 100px auto;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    margin: 100px auto 70px auto;
+  }
+
+  @media screen and (max-width: 760px) {
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    margin: 50px 0 50px 0;
+  }
 `;
 
-const Button = styled.div`
+export const Button = styled.div`
   height: 123px;
   width: 123px;
   background-color: ${props => props.color};
@@ -153,21 +170,48 @@ const Button = styled.div`
   &:hover {
     top: -10px;
   }
+
+  @media screen and (max-width: 1024px) {
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+  }
+
+  @media screen and (max-width: 760px) {
+    height: 85px;
+    width: 85px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: ${props => (props.marginBottomPhone ? '20px' : '')};
+    transform: ${props => (props.positionPhone ? 'translate(65%, 0)' : '')};
+  }
 `;
 
-const ButtonImg = styled.div`
+export const ButtonImg = styled.div`
   width: 45px;
   height: 50px;
   background-size: 45px;
   background-repeat: no-repeat;
   background-image: url(${props => props.src});
   margin-bottom: ${props => props.marginBottom};
+
+  @media screen and (max-width: 1024px) {
+    transform: scale(0.8);
+  }
 `;
 
-const ButtonText = styled.div`
+export const ButtonText = styled.div`
   font-size: 14px;
   color: ${props => props.color};
   font-weight: ${props => props.weight};
+
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 11px;
+  }
 `;
 
 export const MainImgTextWrap = styled.div`
@@ -175,13 +219,32 @@ export const MainImgTextWrap = styled.div`
   height: auto;
   display: grid;
   grid-template-columns: 50% 50%;
-  position: relative;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
 `;
 
-export const MainImgWrap = styled.div``;
+export const MainImgWrap = styled.div`
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    position: relative;
+  }
+`;
 
 export const MainImgBack = styled.div`
   width: 346px;
@@ -191,6 +254,20 @@ export const MainImgBack = styled.div`
   left: 0;
   top: 0;
   border-radius: 50px;
+
+  @media screen and (max-width: 1024px) {
+    width: 270px;
+    height: 270px;
+    border-radius: 45px;
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 240px;
+    height: 240px;
+    border-radius: 40px;
+    top: 0;
+    left: 8%;
+  }
 `;
 
 export const MainImg = styled.div`
@@ -202,12 +279,37 @@ export const MainImg = styled.div`
   position: relative;
   transform: translate(35px, 35px);
   border-radius: 50px;
+
+  @media screen and (max-width: 1024px) {
+    width: 270px;
+    height: 270px;
+    background-size: 270px;
+    border-radius: 45px;
+    transform: translate(30px, 30px);
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 240px;
+    height: 240px;
+    border-radius: 40px;
+    transform: translate(20px, 20px);
+  }
 `;
 
 export const MainTextBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 300px;
+    margin-left: auto;
+  }
+
+  @media screen and (max-width: 760px) {
+    margin: auto;
+    margin-top: 30px;
+  }
 `;
 
 export const MainTitle = styled.div`
@@ -216,12 +318,31 @@ export const MainTitle = styled.div`
   font-weight: 800;
   margin: 30px 0;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
 `;
 
 export const MainText = styled.div`
   font-size: 17px;
   line-height: 30px;
   color: #686868;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+    line-height: 23px;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 12px;
+  }
 `;
 
 const LaborContentsWrap = styled.div`
@@ -229,6 +350,19 @@ const LaborContentsWrap = styled.div`
   margin-top: 170px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+  }
+
+  @media screen and (max-width: 760px) {
+    grid-template-columns: 100%;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
 `;
 
 const LaborContentsBox = styled.div`
@@ -249,6 +383,23 @@ const LaborContentsBox = styled.div`
   &:hover {
     top: -10px;
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 310px;
+    height: 370px;
+    margin-bottom: 50px;
+    position: relative;
+    transform: ${props => (props.middle ? 'translate(55%, 0)' : '')};
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 760px) {
+    transform: ${props => (props.middle ? 'translate(0, 0)' : '')};
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 280px;
+    height: 340px;
+  }
 `;
 
 const BoxImage = styled.div`
@@ -257,6 +408,11 @@ const BoxImage = styled.div`
   background-image: url(${props => props.url});
   border-radius: 30px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1024px) {
+    width: 250px;
+    height: 160px;
+  }
 `;
 
 const BoxTitle = styled.div`
@@ -264,6 +420,14 @@ const BoxTitle = styled.div`
   color: #053dc0;
   font-weight: 700;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 18px;
+  }
 `;
 
 const BoxText = styled.div`
@@ -272,6 +436,15 @@ const BoxText = styled.div`
   color: #686868;
   letter-spacing: -0.1px;
   width: 80%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 11px;
+    line-height: 16px;
+  }
 `;
 
 export default Labor;

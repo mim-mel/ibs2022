@@ -76,11 +76,13 @@ export const SubBanner = styled.div`
 
   @media screen and (max-width: 1024px) {
     height: 500px;
+    background-position: ${props => props.positionIpad};
   }
 
   @media screen and (max-width: 760px) {
     height: 350px;
     background-size: 300%;
+    background-position: ${props => props.positionPhone};
   }
 `;
 

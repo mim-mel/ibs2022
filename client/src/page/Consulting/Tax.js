@@ -1,4 +1,5 @@
 import { Line, SubBanner, SubBannerTitle, Wrap } from '../Company';
+import { ButtonsWrap, Button, ButtonImg, ButtonText } from './Labor';
 import {
   MainImgTextWrap,
   MainImgWrap,
@@ -16,12 +17,16 @@ const Tax = () => {
   return (
     <div>
       <Wrap>
-        <SubBanner url='url(/image/submain2.jpg)'>
+        <SubBanner
+          url='url(/image/submain2.jpg)'
+          positionIpad='-700px -90px'
+          positionPhone='-450px -0px'
+        >
           <SubBannerTitle>CONSULTING</SubBannerTitle>
         </SubBanner>
         <ButtonsWrap>
           <LinkStyled to='/labor'>
-            <Button color='white'>
+            <Button color='white' marginBottomPhone>
               <ButtonImg src='/image/labor-consulting.png' />
               <ButtonText color='#053dc0' weight='900'>
                 노무 컨설팅
@@ -48,7 +53,7 @@ const Tax = () => {
           </LinkStyled>
 
           <LinkStyled to='/edu'>
-            <Button color='white'>
+            <Button color='white' positionPhone>
               <ButtonImg src='/image/edu-consulting.png' />
               <ButtonText color='#053dc0' weight='900'>
                 교육컨설팅
@@ -57,7 +62,7 @@ const Tax = () => {
           </LinkStyled>
 
           <LinkStyled to='/ad'>
-            <Button color='white'>
+            <Button color='white' positionPhone>
               <ButtonImg src='/image/ad-consulting.png' />
               <ButtonText color='#053dc0' weight='900'>
                 홍보컨설팅
@@ -121,50 +126,6 @@ const Tax = () => {
   );
 };
 
-const ButtonsWrap = styled.div`
-  width: 860px;
-  height: 123px;
-  margin: 100px auto;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Button = styled.div`
-  height: 123px;
-  width: 123px;
-  background-color: ${props => props.color};
-  border-radius: 35px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    top: -10px;
-  }
-`;
-
-const ButtonImg = styled.div`
-  width: 45px;
-  height: 50px;
-  background-size: 45px;
-  background-repeat: no-repeat;
-  background-image: url(${props => props.src});
-  margin-bottom: ${props => props.marginBottom};
-`;
-
-const ButtonText = styled.div`
-  font-size: 14px;
-  color: ${props => props.color};
-  font-weight: ${props => props.weight};
-`;
-
 const ContentsWrap = styled.div`
   width: 740px;
   height: auto;
@@ -174,6 +135,20 @@ const ContentsWrap = styled.div`
   grid-gap: 40px;
   margin-bottom: 250px;
   margin-top: 130px;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    grid-gap: 25px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+
+  @media screen and (max-width: 760px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 23.5%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 `;
 
 const ContentBox = styled.div`
@@ -188,6 +163,18 @@ const ContentBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 310px;
+    height: 320px;
+  }
+
+  @media screen and (max-width: 760px) {
+    top: ${props => (props.top ? '0' : '')};
+    width: 300px;
+    height: 310px;
+    margin: 0 auto;
+  }
 `;
 
 const ContentImg = styled.div`
@@ -197,6 +184,20 @@ const ContentImg = styled.div`
   border-radius: 30px;
   background-size: 310px;
   margin-bottom: 35px;
+
+  @media screen and (max-width: 1024px) {
+    width: 270px;
+    height: 200px;
+    background-size: 270px;
+    background-position: 0 -20px;
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 260px;
+    height: 190px;
+    background-size: 270px;
+    background-position: 0 -20px;
+  }
 `;
 
 const ContentText = styled.div`
