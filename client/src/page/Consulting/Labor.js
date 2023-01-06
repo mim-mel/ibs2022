@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 const Labor = () => {
   return (
     <div>
-      <Wrap>
+      <Wrap backGround='#fcfcfc'>
         <SubBanner
           url='url(image/submain2.jpg)'
           positionIpad='-700px -90px'
@@ -18,7 +18,10 @@ const Labor = () => {
         <ButtonsWrap>
           <LinkStyled to='/labor'>
             <Button color='#053dc0' marginBottomPhone>
-              <ButtonImg src='image/labor-consulting-w.png' />
+              <ButtonImg
+                src='image/labor-consulting-w.png'
+                marginBottom='5px'
+              />
               <ButtonText color='white' weight='600'>
                 노무컨설팅
               </ButtonText>
@@ -27,7 +30,7 @@ const Labor = () => {
 
           <LinkStyled to='/tax'>
             <Button color='white'>
-              <ButtonImg src='image/tax-consulting.png' />
+              <ButtonImg src='image/tax-consulting.png' marginBottom='9px' />
               <ButtonText color='#053dc0' weight='900'>
                 세무컨설팅
               </ButtonText>
@@ -36,7 +39,10 @@ const Labor = () => {
 
           <LinkStyled to='/hospital'>
             <Button color='white'>
-              <ButtonImg src='image/hospital-open-consulting.png' />
+              <ButtonImg
+                src='image/hospital-open-consulting.png'
+                marginBottom='6px'
+              />
               <ButtonText color='#053dc0' weight='900'>
                 개원컨설팅
               </ButtonText>
@@ -45,7 +51,7 @@ const Labor = () => {
 
           <LinkStyled to='/edu'>
             <Button color='white' positionPhone>
-              <ButtonImg src='image/edu-consulting.png' />
+              <ButtonImg src='image/edu-consulting.png' marginBottom='6px' />
               <ButtonText color='#053dc0' weight='900'>
                 교육컨설팅
               </ButtonText>
@@ -54,7 +60,7 @@ const Labor = () => {
 
           <LinkStyled to='/ad'>
             <Button color='white' positionPhone>
-              <ButtonImg src='image/ad-consulting.png' />
+              <ButtonImg src='image/ad-consulting.png' marginBottom='3px' />
               <ButtonText color='#053dc0' weight='900'>
                 홍보컨설팅
               </ButtonText>
@@ -196,7 +202,12 @@ export const ButtonImg = styled.div`
   margin-bottom: ${props => props.marginBottom};
 
   @media screen and (max-width: 1024px) {
+    transform: scale(0.9);
+  }
+
+  @media screen and (max-width: 760px) {
     transform: scale(0.8);
+    margin-bottom: 0;
   }
 `;
 
@@ -366,8 +377,8 @@ const LaborContentsWrap = styled.div`
 `;
 
 const LaborContentsBox = styled.div`
-  width: 330px;
-  height: 400px;
+  width: 345px;
+  height: 410px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
   margin-bottom: 150px;

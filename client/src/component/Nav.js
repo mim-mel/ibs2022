@@ -86,7 +86,9 @@ const Nav = () => {
               <LinkStyled to='/labor'>
                 <SubTitle bottom>컨설팅</SubTitle>
               </LinkStyled>
-              <SubTitle>서비스</SubTitle>
+              <LinkStyled to='/funds'>
+                <SubTitle>서비스</SubTitle>
+              </LinkStyled>
             </Bubble>
           </NavTitle>
           <NavTitle>

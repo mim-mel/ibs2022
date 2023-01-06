@@ -16,7 +16,7 @@ import Fade from 'react-reveal/Fade';
 const Hospital = () => {
   return (
     <div>
-      <Wrap>
+      <Wrap backGround='#fcfcfc'>
         <SubBanner
           url='url(/image/submain2.jpg)'
           positionIpad='-700px -90px'
@@ -27,7 +27,7 @@ const Hospital = () => {
         <ButtonsWrap>
           <LinkStyled to='/labor'>
             <Button color='white' marginBottomPhone>
-              <ButtonImg src='/image/labor-consulting.png' />
+              <ButtonImg src='/image/labor-consulting.png' marginBottom='5px' />
               <ButtonText color='#053dc0' weight='900'>
                 노무컨설팅
               </ButtonText>
@@ -35,7 +35,7 @@ const Hospital = () => {
           </LinkStyled>
           <LinkStyled to='/tax'>
             <Button color='white'>
-              <ButtonImg src='/image/tax-consulting.png' />
+              <ButtonImg src='/image/tax-consulting.png' marginBottom='9px' />
               <ButtonText color='#053dc0' weight='900'>
                 세무컨설팅
               </ButtonText>
@@ -44,7 +44,10 @@ const Hospital = () => {
 
           <LinkStyled to='/hospital'>
             <Button color='#053dc0'>
-              <ButtonImg src='/image/hospital-open-consulting-w.png' />
+              <ButtonImg
+                src='/image/hospital-open-consulting-w.png'
+                marginBottom='6px'
+              />
               <ButtonText color='white' weight='600'>
                 개원컨설팅
               </ButtonText>
@@ -53,7 +56,7 @@ const Hospital = () => {
 
           <LinkStyled to='/edu'>
             <Button color='white' positionPhone>
-              <ButtonImg src='/image/edu-consulting.png' />
+              <ButtonImg src='/image/edu-consulting.png' marginBottom='6px' />
               <ButtonText color='#053dc0' weight='900'>
                 교육컨설팅
               </ButtonText>
@@ -62,7 +65,7 @@ const Hospital = () => {
 
           <LinkStyled to='/ad'>
             <Button color='white' positionPhone>
-              <ButtonImg src='/image/ad-consulting.png' />
+              <ButtonImg src='/image/ad-consulting.png' marginBottom='3px' />
               <ButtonText color='#053dc0' weight='900'>
                 홍보컨설팅
               </ButtonText>

@@ -16,7 +16,7 @@ import Fade from 'react-reveal/Fade';
 const Edu = () => {
   return (
     <div>
-      <Wrap>
+      <Wrap backGround='#fcfcfc'>
         <SubBanner
           url='url(/image/submain2.jpg)'
           positionIpad='-700px -90px'
@@ -27,7 +27,7 @@ const Edu = () => {
         <ButtonsWrap>
           <LinkStyled to='/labor'>
             <Button color='white' marginBottomPhone>
-              <ButtonImg src='/image/labor-consulting.png' marginBottom='6px' />
+              <ButtonImg src='/image/labor-consulting.png' marginBottom='5px' />
               <ButtonText color='#053dc0' weight='900'>
                 노무컨설팅
               </ButtonText>
@@ -65,7 +65,7 @@ const Edu = () => {
 
           <LinkStyled to='/ad'>
             <Button color='white' positionPhone>
-              <ButtonImg src='/image/ad-consulting.png' marginBottom='4px' />
+              <ButtonImg src='/image/ad-consulting.png' marginBottom='3px' />
               <ButtonText color='#053dc0' weight='900'>
                 홍보컨설팅
               </ButtonText>

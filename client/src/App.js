@@ -8,6 +8,11 @@ import Tax from './page/Consulting/Tax';
 import Edu from './page/Consulting/Edu';
 import Hospital from './page/Consulting/Hospital';
 import Ad from './page/Consulting/Ad';
+import Funds from './page/Service/Funds';
+import Risks from './page/Service/Risks';
+import Evaluation from './page/Service/Evaluation';
+import CompanyX from './page/Service/CompanyX';
+import CompanyBuild from './page/Service/CompanyBuild';
 
 function App() {
   return (
@@ -20,6 +25,11 @@ function App() {
         <Route path='/hospital' element={<Hospital />} />
         <Route path='/edu' element={<Edu />} />
         <Route path='/ad' element={<Ad />} />
+        <Route path='/funds' element={<Funds />} />
+        <Route path='/risks' element={<Risks />} />
+        <Route path='/evaluation' element={<Evaluation />} />
+        <Route path='/companybuild' element={<CompanyBuild />} />
+        <Route path='/companyx' element={<CompanyX />} />
       </Route>
     </Routes>
   );

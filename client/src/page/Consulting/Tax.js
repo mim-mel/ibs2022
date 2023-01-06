@@ -16,7 +16,7 @@ import Fade from 'react-reveal/Fade';
 const Tax = () => {
   return (
     <div>
-      <Wrap>
+      <Wrap backGround='#fcfcfc'>
         <SubBanner
           url='url(/image/submain2.jpg)'
           positionIpad='-700px -90px'
@@ -27,7 +27,7 @@ const Tax = () => {
         <ButtonsWrap>
           <LinkStyled to='/labor'>
             <Button color='white' marginBottomPhone>
-              <ButtonImg src='/image/labor-consulting.png' />
+              <ButtonImg src='/image/labor-consulting.png' marginBottom='5px' />
               <ButtonText color='#053dc0' weight='900'>
                 노무 컨설팅
               </ButtonText>
@@ -36,7 +36,7 @@ const Tax = () => {
 
           <LinkStyled to='/tax'>
             <Button color='#053dc0'>
-              <ButtonImg src='/image/tax-consulting-w.png' />
+              <ButtonImg src='/image/tax-consulting-w.png' marginBottom='7px' />
               <ButtonText color='white' weight='600'>
                 세무컨설팅
               </ButtonText>
@@ -45,7 +45,10 @@ const Tax = () => {
 
           <LinkStyled to='/hospital'>
             <Button color='white'>
-              <ButtonImg src='/image/hospital-open-consulting.png' />
+              <ButtonImg
+                src='/image/hospital-open-consulting.png'
+                marginBottom='6px'
+              />
               <ButtonText color='#053dc0' weight='900'>
                 개원컨설팅
               </ButtonText>
@@ -54,7 +57,7 @@ const Tax = () => {
 
           <LinkStyled to='/edu'>
             <Button color='white' positionPhone>
-              <ButtonImg src='/image/edu-consulting.png' />
+              <ButtonImg src='/image/edu-consulting.png' marginBottom='6px' />
               <ButtonText color='#053dc0' weight='900'>
                 교육컨설팅
               </ButtonText>
@@ -63,7 +66,7 @@ const Tax = () => {
 
           <LinkStyled to='/ad'>
             <Button color='white' positionPhone>
-              <ButtonImg src='/image/ad-consulting.png' />
+              <ButtonImg src='/image/ad-consulting.png' marginBottom='3px' />
               <ButtonText color='#053dc0' weight='900'>
                 홍보컨설팅
               </ButtonText>
@@ -92,6 +95,7 @@ const Tax = () => {
             </MainTextBlock>
           </Fade>
         </MainImgTextWrap>
+
         <ContentsWrap>
           <Fade bottom delay={500}>
             <ContentBox top>

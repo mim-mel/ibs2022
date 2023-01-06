@@ -16,7 +16,7 @@ import Fade from 'react-reveal/Fade';
 const Ad = () => {
   return (
     <div>
-      <Wrap>
+      <Wrap backGround='#fcfcfc'>
         <SubBanner
           url='url(/image/submain2.jpg)'
           positionIpad='-700px -90px'
@@ -27,7 +27,7 @@ const Ad = () => {
         <ButtonsWrap>
           <LinkStyled to='/labor'>
             <Button color='white' marginBottomPhone>
-              <ButtonImg src='/image/labor-consulting.png' marginBottom='6px' />
+              <ButtonImg src='/image/labor-consulting.png' marginBottom='5px' />
               <ButtonText color='#053dc0' weight='900'>
                 노무컨설팅
               </ButtonText>
@@ -65,7 +65,7 @@ const Ad = () => {
 
           <LinkStyled to='/ad'>
             <Button color='#053dc0' positionPhone>
-              <ButtonImg src='/image/ad-consulting-w.png' marginBottom='4px' />
+              <ButtonImg src='/image/ad-consulting-w.png' marginBottom='3px' />
               <ButtonText color='white' weight='600'>
                 홍보컨설팅
               </ButtonText>

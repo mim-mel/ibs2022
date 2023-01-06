@@ -63,6 +63,7 @@ export const Wrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: ${props => props.backGround};
 `;
 
 export const SubBanner = styled.div`

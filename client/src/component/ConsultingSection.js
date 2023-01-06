@@ -336,7 +336,7 @@ const Icon2 = styled.div`
 const Icon3 = styled.div`
   background-image: ${props =>
     props.toggle
-      ? 'url(/image/corporation-consulting.png)'
+      ? 'url(/image/company-open-service.png)'
       : 'url(/image/hospital-open-consulting.png)'};
   width: 50px;
   height: 50px;
@@ -352,7 +352,7 @@ const Icon3 = styled.div`
 const Icon4 = styled.div`
   background-image: ${props =>
     props.toggle
-      ? 'url(/image/corporation-x-consulting.png)'
+      ? 'url(/image/company-x-service.png)'
       : 'url(/image/edu-consulting.png)'};
   width: 50px;
   height: 50px;
@@ -368,7 +368,7 @@ const Icon4 = styled.div`
 const Icon5 = styled.div`
   background-image: ${props =>
     props.toggle
-      ? 'url(/image/valuation-service.png)'
+      ? 'url(/image/evaluation-service.png)'
       : 'url(/image/ad-consulting.png)'};
   width: 50px;
   height: 50px;
