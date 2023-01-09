@@ -26,7 +26,7 @@ const Funds = () => {
         positionIpad='-700px -90px'
         positionPhone='-450px -0px'
       >
-        <SubBannerTitle>CONSULTING</SubBannerTitle>
+        <SubBannerTitle>SERVICE</SubBannerTitle>
       </SubBanner>
       <ButtonsWrap>
         <LinkStyled to='/funds'>

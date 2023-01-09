@@ -26,7 +26,7 @@ const CompanyBuild = () => {
         positionIpad='-700px -90px'
         positionPhone='-450px -0px'
       >
-        <SubBannerTitle>CONSULTING</SubBannerTitle>
+        <SubBannerTitle>SERVICE</SubBannerTitle>
       </SubBanner>
       <ButtonsWrap>
         <LinkStyled to='/funds'>
@@ -105,13 +105,15 @@ const CompanyBuild = () => {
           <ContentsWrap2>
             <Title>STEP 01</Title>
             <ContentBox>
-              <ContentImgCircle>
-                <ContentImg url='image/funds2.png' />
-              </ContentImgCircle>
-              <ContentTitle>두루누리 사회보험료 지원</ContentTitle>
+              <ContentIconWrap>
+                <ContentIconBlock>
+                  <ContentIcon url='image/company-build-icon1.png' />
+                </ContentIconBlock>
+                <ContentTitle>상호가능여부 확인 후 상호명 결정</ContentTitle>
+              </ContentIconWrap>
               <ContentText>
-                사업주와 소속 근로자의 사회보험료 일부를 국가에서 지원함으로써
-                사회보험 가입에 따른 부담을 완화
+                상호명이 중복되지 않도록 현재 사용 중인 법인 이름을 검색해봐야
+                합니다
               </ContentText>
             </ContentBox>
           </ContentsWrap2>
@@ -121,13 +123,17 @@ const CompanyBuild = () => {
           <ContentsWrap2 top>
             <Title>STEP 02</Title>
             <ContentBox>
-              <ContentImgCircle>
-                <ContentImg url='image/funds2.png' />
-              </ContentImgCircle>
-              <ContentTitle>두루누리 사회보험료 지원</ContentTitle>
+              <ContentIconWrap>
+                <ContentIconBlock>
+                  <ContentIcon url='image/company-build-icon2.png' />
+                </ContentIconBlock>
+                <ContentTitle>
+                  회사운영 총괄을 위한 본점 소재지 결정
+                </ContentTitle>
+              </ContentIconWrap>
               <ContentText>
-                사업주와 소속 근로자의 사회보험료 일부를 국가에서 지원함으로써
-                사회보험 가입에 따른 부담을 완화
+                법인 등기부 등본에 기재된 사업 목적을 바탕으로 사업자 등록을
+                진행하기에, 사업목적을 확실하게 정하는 것이 중요합니다.
               </ContentText>
             </ContentBox>
           </ContentsWrap2>
@@ -137,13 +143,15 @@ const CompanyBuild = () => {
           <ContentsWrap2>
             <Title>STEP 03</Title>
             <ContentBox>
-              <ContentImgCircle>
-                <ContentImg url='image/funds2.png' />
-              </ContentImgCircle>
-              <ContentTitle>두루누리 사회보험료 지원</ContentTitle>
+              <ContentIconWrap>
+                <ContentIconBlock>
+                  <ContentIcon url='image/company-build-icon3.png' />
+                </ContentIconBlock>
+                <ContentTitle>사업특성을 고려한 회사 자본금 준비</ContentTitle>
+              </ContentIconWrap>
               <ContentText>
-                사업주와 소속 근로자의 사회보험료 일부를 국가에서 지원함으로써
-                사회보험 가입에 따른 부담을 완화
+                대부분의 사업은 100원 이상의 자본금만 있어도 가능합니다.
+                일반적으로 1천~2천 만원 정도의 규모로 사업을 시작합니다.
               </ContentText>
             </ContentBox>
           </ContentsWrap2>
@@ -153,13 +161,15 @@ const CompanyBuild = () => {
           <ContentsWrap2 top>
             <Title>STEP 04</Title>
             <ContentBox>
-              <ContentImgCircle>
-                <ContentImg url='image/funds2.png' />
-              </ContentImgCircle>
-              <ContentTitle>두루누리 사회보험료 지원</ContentTitle>
+              <ContentIconWrap>
+                <ContentIconBlock>
+                  <ContentIcon url='image/company-build-icon4.png' />
+                </ContentIconBlock>
+                <ContentTitle>사업을 영위할 사업 목적 결정</ContentTitle>
+              </ContentIconWrap>
               <ContentText>
-                사업주와 소속 근로자의 사회보험료 일부를 국가에서 지원함으로써
-                사회보험 가입에 따른 부담을 완화
+                법인 등기부 등본에 기재된 사업 목적을 바탕으로 사업자 등록을
+                진행하기에, 사업목적을 확실하게 정하는 것이 중요합니다.
               </ContentText>
             </ContentBox>
           </ContentsWrap2>
@@ -169,13 +179,15 @@ const CompanyBuild = () => {
           <ContentsWrap2>
             <Title>STEP 05</Title>
             <ContentBox>
-              <ContentImgCircle>
-                <ContentImg url='image/funds2.png' />
-              </ContentImgCircle>
-              <ContentTitle>두루누리 사회보험료 지원</ContentTitle>
+              <ContentIconWrap>
+                <ContentIconBlock>
+                  <ContentIcon url='image/company-build-icon5.png' />
+                </ContentIconBlock>
+                <ContentTitle>회사를 대표할 회사 임원구성 결정</ContentTitle>
+              </ContentIconWrap>
               <ContentText>
-                사업주와 소속 근로자의 사회보험료 일부를 국가에서 지원함으로써
-                사회보험 가입에 따른 부담을 완화
+                법인설립시 법적으로 등기되는 대표이사, 이사, 감사 등의임원을
+                선정해야 합니다.
               </ContentText>
             </ContentBox>
           </ContentsWrap2>
@@ -185,13 +197,15 @@ const CompanyBuild = () => {
           <ContentsWrap2 top>
             <Title>STEP 06</Title>
             <ContentBox>
-              <ContentImgCircle>
-                <ContentImg url='image/funds2.png' />
-              </ContentImgCircle>
-              <ContentTitle>두루누리 사회보험료 지원</ContentTitle>
+              <ContentIconWrap>
+                <ContentIconBlock>
+                  <ContentIcon url='image/company-build-icon6.png' />
+                </ContentIconBlock>
+                <ContentTitle>필요서류 준비 법인설립 완료</ContentTitle>
+              </ContentIconWrap>
               <ContentText>
-                사업주와 소속 근로자의 사회보험료 일부를 국가에서 지원함으로써
-                사회보험 가입에 따른 부담을 완화
+                법인설립에 필요한 여러가지 서류를 제출하는 것으로 법인설립
+                절차가 마무리 됩니다.
               </ContentText>
             </ContentBox>
           </ContentsWrap2>
@@ -206,7 +220,7 @@ const ContentsWrap = styled.div`
   height: auto;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 45px;
+  grid-gap: 80px;
   margin-bottom: 250px;
   margin-top: 180px;
 
@@ -214,12 +228,11 @@ const ContentsWrap = styled.div`
     width: 80%;
     grid-gap: 25px;
     margin-top: 120px;
-    margin-bottom: 180px;
+    margin-bottom: 230px;
   }
 
   @media screen and (max-width: 760px) {
     grid-template-columns: 100%;
-    grid-template-rows: 23.5%;
     margin-top: 100px;
     margin-bottom: 100px;
   }
@@ -232,7 +245,11 @@ const ContentsWrap2 = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
-  top: ${props => (props.top ? '90px' : '')};
+  top: ${props => (props.top ? '140px' : '')};
+
+  @media screen and (max-width: 760px) {
+    top: 0;
+  }
 `;
 
 const Title = styled.div`
@@ -243,11 +260,15 @@ const Title = styled.div`
   text-align: left;
   margin-left: 60px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 760px) {
+    font-size: 22px;
+  }
 `;
 
 const ContentBox = styled.div`
-  width: 360px;
-  height: 290px;
+  width: 370px;
+  height: 280px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
   position: relative;
@@ -259,71 +280,77 @@ const ContentBox = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 310px;
-    height: 320px;
+    height: 260px;
   }
 
   @media screen and (max-width: 760px) {
     top: ${props => (props.top ? '0' : '')};
     width: 280px;
-    height: 290px;
-    margin: 0 auto;
+    height: 230px;
+    margin-bottom: 20px;
   }
 `;
 
-const ContentImgCircle = styled.div`
-  width: 120px;
-  height: 120px;
-  border-radius: 100px;
-  background-color: #053dc0;
+const ContentIconWrap = styled.div`
+  display: grid;
+  width: 70%;
+  grid-template-columns: 25% 70%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 25% 68%;
+  }
+`;
+
+const ContentIconBlock = styled.div`
+  width: 53px;
+  height: 53px;
+  border-radius: 15px;
+  border: 3px solid #053dc0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin-right: 15px;
 
   @media screen and (max-width: 1024px) {
-    width: 110px;
-    height: 110px;
   }
 
   @media screen and (max-width: 760px) {
-    width: 100px;
-    height: 100px;
+    width: 45px;
+    height: 45px;
   }
 `;
 
-const ContentImg = styled.div`
-  width: 65px;
-  height: 65px;
+const ContentIcon = styled.div`
+  width: 30px;
+  height: 30px;
   background-image: url(${props => props.url});
-  background-size: 65px;
+  background-size: 30px;
   background-repeat: no-repeat;
   margin: auto;
 
-  @media screen and (max-width: 1024px) {
-    width: 58px;
-    height: 58px;
-    background-size: 58px;
-  }
-
   @media screen and (max-width: 760px) {
-    width: 50px;
-    height: 50px;
-    background-size: 50px;
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
   }
 `;
 
 const ContentTitle = styled.div`
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 800;
   color: #053dc0;
-  margin-bottom: 15px;
+  line-height: 30px;
 
   @media screen and (max-width: 1024px) {
+    font-size: 19px;
   }
 
   @media screen and (max-width: 760px) {
-    font-size: 19px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 25px;
   }
 `;
 
@@ -331,14 +358,18 @@ const ContentText = styled.div`
   font-size: 15px;
   font-weight: 500;
   color: #686868;
-  width: 240px;
+  width: 71%;
   margin: 0px auto;
-  line-height: 25px;
+  line-height: 27px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+    line-height: 25px;
+  }
 
   @media screen and (max-width: 760px) {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 23px;
-    width: 220px;
   }
 `;
 
