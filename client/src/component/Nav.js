@@ -74,14 +74,16 @@ const Nav = () => {
             </LinkStyled>
           </NavTitle>
           <NavTitle>
-            <NavTitleText>
-              CONSULTING
-              <DropdownArrow
-                onClick={isConsultingToggle}
-                src='/image/drop-down-white.png'
-                isDropdownClicked={isConsulting}
-              />
-            </NavTitleText>
+            <LinkStyled to='/labor'>
+              <NavTitleText>
+                CONSULTING
+                <DropdownArrow
+                  onClick={isConsultingToggle}
+                  src='/image/drop-down-white.png'
+                  isDropdownClicked={isConsulting}
+                />
+              </NavTitleText>
+            </LinkStyled>
             <Bubble isDropdownClicked={isConsulting}>
               <LinkStyled to='/labor'>
                 <SubTitle bottom>컨설팅</SubTitle>
@@ -92,16 +94,20 @@ const Nav = () => {
             </Bubble>
           </NavTitle>
           <NavTitle>
-            <NavTitleText>
-              PORTFOLIO
-              <DropdownArrow
-                onClick={isPortfolioToggle}
-                src='/image/drop-down-white.png'
-                isDropdownClicked={isPortfolio}
-              />
-            </NavTitleText>
+            <LinkStyled to='/portfolio'>
+              <NavTitleText>
+                PORTFOLIO
+                <DropdownArrow
+                  onClick={isPortfolioToggle}
+                  src='/image/drop-down-white.png'
+                  isDropdownClicked={isPortfolio}
+                />
+              </NavTitleText>
+            </LinkStyled>
             <Bubble isDropdownClicked={isPortfolio}>
-              <SubTitle bottom>포트폴리오</SubTitle>
+              <LinkStyled to='/portfolio'>
+                <SubTitle bottom>포트폴리오</SubTitle>
+              </LinkStyled>
               <SubTitle>컨퍼런스</SubTitle>
             </Bubble>
           </NavTitle>

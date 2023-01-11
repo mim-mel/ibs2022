@@ -1,4 +1,4 @@
-const Cunference = () => {
+const Conference = () => {
   return (
     <div>
       <div>Cunference</div>
@@ -6,4 +6,4 @@ const Cunference = () => {
   );
 };
 
-export default Cunference;
+export default Conference;
