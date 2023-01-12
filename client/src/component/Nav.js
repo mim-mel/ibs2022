@@ -108,7 +108,9 @@ const Nav = () => {
               <LinkStyled to='/portfolio'>
                 <SubTitle bottom>포트폴리오</SubTitle>
               </LinkStyled>
-              <SubTitle>컨퍼런스</SubTitle>
+              <LinkStyled to='/conference'>
+                <SubTitle>컨퍼런스</SubTitle>
+              </LinkStyled>
             </Bubble>
           </NavTitle>
           <NavTitle>
