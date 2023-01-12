@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 const Company = () => {
   return (
     <Wrap>
-      <SubBanner url='url(/image/submain1.jpg)'>
+      <SubBanner url='url(/image/submain4.jpg)'>
         <SubBannerTitle>COMPANY</SubBannerTitle>
       </SubBanner>
       <Fade bottom>

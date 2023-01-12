@@ -106,7 +106,7 @@ const Portfolio = () => {
   return (
     <Wrap backGround='#fcfcfc'>
       <SubBanner
-        url='url(/image/submain3.jpg)'
+        url='url(/image/submain6.jpg)'
         positionIpad='-700px -90px'
         positionPhone='-450px -0px'
       >

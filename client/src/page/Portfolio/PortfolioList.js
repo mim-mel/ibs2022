@@ -87,7 +87,7 @@ const PortfolioList = () => {
   );
 };
 
-const ListWrap = styled.div`
+export const ListWrap = styled.div`
   width: 1300px;
   height: auto;
   display: grid;
@@ -108,7 +108,7 @@ const ListWrap = styled.div`
   }
 `;
 
-const WhiteBox = styled.div`
+export const WhiteBox = styled.div`
   width: 100%;
   height: 320px;
   background-color: white;
@@ -120,6 +120,7 @@ const WhiteBox = styled.div`
   padding-top: 13px;
   box-sizing: border-box;
   margin-bottom: 30px;
+  cursor: ${props => (props.pointer ? 'pointer' : '')};
 
   &:hover {
     top: -10px;
@@ -135,7 +136,7 @@ const WhiteBox = styled.div`
   }
 `;
 
-const BoxImage = styled.div`
+export const BoxImage = styled.div`
   width: 90%;
   height: 80%;
   background-color: aqua;
@@ -148,12 +149,12 @@ const BoxImage = styled.div`
   }
 `;
 
-const BoxTitle = styled.div`
+export const BoxTitle = styled.div`
   font-size: 16px;
   font-weight: 500;
   color: #707070;
   text-align: center;
-  margin-top: 10px;
+  margin-top: ${props => (props.marginTop ? '20px' : '10px')};
   margin-bottom: 4px;
 
   @media screen and (max-width: 1024px) {
@@ -168,7 +169,7 @@ const BoxTitle = styled.div`
   }
 `;
 
-const BoxText = styled.div`
+export const BoxText = styled.div`
   font-size: 11px;
   color: #969696;
   text-align: center;

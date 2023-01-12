@@ -15,6 +15,7 @@ import CompanyX from './page/Service/CompanyX';
 import CompanyBuild from './page/Service/CompanyBuild';
 import Portfolio from './page/Portfolio/Portfolio';
 import Conference from './page/Portfolio/Conference';
+import Library from './page/Customer/Library';
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
         <Route path='/companybuild' element={<CompanyBuild />} />
         <Route path='/companyx' element={<CompanyX />} />
         <Route path='/companyx' element={<CompanyX />} />
+
+        {/* customer 페이지들 */}
+        <Route path='/library' element={<Library />} />
       </Route>
     </Routes>
   );

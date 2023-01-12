@@ -123,7 +123,9 @@ const Nav = () => {
               />
             </NavTitleText>
             <Bubble isDropdownClicked={isCustomer}>
-              <SubTitle bottom>자료실</SubTitle>
+              <LinkStyled to='/library'>
+                <SubTitle bottom>자료실</SubTitle>
+              </LinkStyled>
               <SubTitle bottom>온라인문의</SubTitle>
               <SubTitle>FAQ</SubTitle>
             </Bubble>
