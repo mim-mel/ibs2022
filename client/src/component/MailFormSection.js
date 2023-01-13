@@ -121,6 +121,7 @@ const MailWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   @media screen and (max-width: 1024px) {
@@ -129,8 +130,8 @@ const MailWrap = styled.div`
 
   @media screen and (max-width: 760px) {
     width: 80%;
-    height: 600px;
-    margin: 0 auto 140px auto;
+    height: 550px;
+    margin: 0 auto 100px auto;
   }
 `;
 
@@ -162,7 +163,11 @@ const MailText = styled.div`
   margin-bottom: 30px;
 
   @media screen and (max-width: 760px) {
-    font-size: 10px;
+    font-size: 12px;
+    width: 70%;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -202,7 +207,7 @@ const TextAreaBlock = styled.div`
   margin-bottom: 35px;
 
   @media screen and (max-width: 760px) {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 `;
 
@@ -273,10 +278,11 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 760px) {
-    width: 110px;
+    width: 80px;
     font-size: 13px;
     height: 35px;
     left: 56%;
+    margin-left: 30px;
   }
 `;
 
@@ -337,11 +343,20 @@ const CheckBox = styled.input`
   width: 23px;
   color: #a5a5a5;
   cursor: pointer;
+
+  @media screen and (max-width: 760px) {
+    font-size: 15px;
+  }
 `;
 
 const CheckBoxText = styled.div`
   font-size: 15px;
   color: #8c8c8c;
+
+  @media screen and (max-width: 760px) {
+    font-size: 12px;
+    margin-top: 2px;
+  }
 `;
 
 export default MailFormSection;

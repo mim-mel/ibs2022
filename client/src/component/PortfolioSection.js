@@ -251,6 +251,7 @@ const PortfolioImgWrap1 = styled.div`
   height: 440px;
   position: relative;
   margin: 0 auto;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 1400px) {
     width: 1000px;
@@ -258,10 +259,12 @@ const PortfolioImgWrap1 = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 80vw;
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 760px) {
     height: 340px;
+    margin-bottom: 0;
   }
 `;
 

@@ -16,6 +16,9 @@ import CompanyBuild from './page/Service/CompanyBuild';
 import Portfolio from './page/Portfolio/Portfolio';
 import Conference from './page/Portfolio/Conference';
 import Library from './page/Customer/Library';
+import Form from './page/Customer/Form';
+import Question from './page/Customer/Question';
+import Contact from './page/Contact';
 
 function App() {
   return (
@@ -43,6 +46,11 @@ function App() {
 
         {/* customer 페이지들 */}
         <Route path='/library' element={<Library />} />
+        <Route path='/form' element={<Form />} />
+        <Route path='/question' element={<Question />} />
+
+        {/* contact 페이지 */}
+        <Route path='/contact' element={<Contact />} />
       </Route>
     </Routes>
   );

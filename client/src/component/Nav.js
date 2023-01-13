@@ -126,12 +126,18 @@ const Nav = () => {
               <LinkStyled to='/library'>
                 <SubTitle bottom>자료실</SubTitle>
               </LinkStyled>
-              <SubTitle bottom>온라인문의</SubTitle>
-              <SubTitle>FAQ</SubTitle>
+              <LinkStyled to='/form'>
+                <SubTitle bottom>온라인문의</SubTitle>
+              </LinkStyled>
+              <LinkStyled to='/question'>
+                <SubTitle>FAQ</SubTitle>
+              </LinkStyled>
             </Bubble>
           </NavTitle>
           <NavTitle>
-            <NavTitleText>CONTACT US</NavTitleText>
+            <LinkStyled to='/contact'>
+              <NavTitleText>CONTACT US</NavTitleText>
+            </LinkStyled>
           </NavTitle>
         </TitleWrap>
         <IsClickedBlock onClick={() => isMenuToggle()}>

@@ -85,7 +85,7 @@ const MapSection = () => {
 const MapWrap = styled.div`
   width: 1000px;
   height: 700px;
-  margin: 200px auto 150px auto;
+  margin: 150px auto 150px auto;
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
@@ -165,10 +165,6 @@ const MapTextBlock = styled.div`
   align-items: flex-start;
   padding: 60px 0;
   box-sizing: border-box;
-
-  @media screen and (max-width: 760px) {
-    padding: 30px 15px;
-  }
 `;
 
 const MapTitle = styled.div`

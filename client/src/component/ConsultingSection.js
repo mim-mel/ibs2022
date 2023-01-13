@@ -254,6 +254,10 @@ const IconWrap = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 760px) {
+    margin-left: 10%;
+  }
 `;
 
 const IconBlock = styled.div`

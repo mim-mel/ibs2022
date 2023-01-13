@@ -105,7 +105,7 @@ const FooterText = styled.div`
   }
 
   @media screen and (max-width: 760px) {
-    font-size: 20px;
+    font-size: 19px;
   }
 `;
 
